@@ -1,4 +1,4 @@
-package com.rafaelmiranda.gestaoclientes.Repositories;
+package com.rafaelmiranda.gestaoclientes.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

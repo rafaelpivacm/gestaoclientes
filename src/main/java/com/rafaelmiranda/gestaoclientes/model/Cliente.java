@@ -1,6 +1,8 @@
 package com.rafaelmiranda.gestaoclientes.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Email;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -20,15 +22,19 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     @Column(nullable = false)
     private String nome;
 
+    @NotBlank
+    @Email
     @Column(unique = true, nullable = false)
     private String email;
 
     private String telefone;
 
-    @Column(name = "cpf_cnpj", unique = true)
+    @NotBlank
+    @Column(name = "cpf_cnpj", unique = true, nullable = false)
     private String cpfCnpj;
 
     private String endereco;
@@ -42,6 +48,21 @@ public class Cliente {
 
     @PrePersist
     public void prePersist() {
-        this.dataCriacao = LocalDateTime.now();
+        if (this.dataCriacao == null) {
+            this.dataCriacao = LocalDateTime.now();
+        }
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        Cliente cliente = (Cliente) object;
+        return id != null && id.equals(cliente.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return 31;
     }
 }
