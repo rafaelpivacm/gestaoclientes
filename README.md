@@ -41,7 +41,7 @@ O sistema foi desenvolvido em **Java 21**, utilizando **Spring Boot** e **Postgr
 ### Passos
 
 # Clonar o repositório
-git clone https://github.com/seu-usuario/nome-do-repo.git
+git clone https://github.com/rafaelpivacm/gestaoclientes.git
 
 # Acessar a pasta do projeto
 cd nome-do-repo
