@@ -1,4 +1,4 @@
-# Sistema de Gestão de Clientes, Vendedores e Finanças
+# Sistema de Gestão de Clientes, Vendedores e Finanças (Em Desenvolvimento)
 
 Este projeto é uma aplicação de gestão que substitui planilhas de Excel, trazendo mais **organização, segurança e automação** para o controle de clientes, vendedores e transações financeiras.
 
@@ -44,7 +44,7 @@ O sistema foi desenvolvido em **Java 21**, utilizando **Spring Boot** e **Postgr
 git clone https://github.com/rafaelpivacm/gestaoclientes.git
 
 # Acessar a pasta do projeto
-cd nome-do-repo
+cd gestaoclientes
 
 # Rodar a aplicação
 mvn spring-boot:run
